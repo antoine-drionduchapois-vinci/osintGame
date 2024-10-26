@@ -4,7 +4,10 @@ import { AuthComponent } from './auth/auth.component';
 import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: AuthComponent }, // Default route
+  { 
+    path: '', 
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule), 
+  }, // Default route
   { 
     path: 'game', 
     loadChildren: () => import('./game/game.module').then(m => m.GameModule), 

@@ -10,7 +10,6 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 // Components
-import { AuthComponent } from './auth/auth.component';
 import { HeaderComponent } from './header/header.component';
 
 // PrimeNG Modules
@@ -26,7 +25,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent,
     HeaderComponent
   ],
   imports: [
@@ -35,12 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    FormsModule,
-    InputTextModule,
     ButtonModule,
-    CardModule,
     ToolbarModule,
-    AvatarModule
+
   ],
   providers: [
     provideClientHydration()
