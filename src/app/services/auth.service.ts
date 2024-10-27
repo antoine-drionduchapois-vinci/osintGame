@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   // Register a new user with email and password
-  register(email: string, password: string): Promise<any> {
+ async register(email: string, password: string): Promise<any> {
     return this.afAuth.createUserWithEmailAndPassword(email, password)
       .then(userCredential => {
         console.log('User registered successfully:', userCredential.user);
@@ -47,7 +47,7 @@ export class AuthService {
   }
 
   // Sign in an existing user
-  signin(email: string, password: string): Promise<any> {
+  async signin(email: string, password: string): Promise<any> {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then(userCredential => {
         console.log('User signed in successfully:', userCredential.user);
@@ -60,7 +60,7 @@ export class AuthService {
   }
   
   // Sign out the current user
-  signOut(): Promise<void> {
+  async signOut(): Promise<void> {
     return this.afAuth.signOut()
       .then(() => {
         console.log('User signed out successfully');

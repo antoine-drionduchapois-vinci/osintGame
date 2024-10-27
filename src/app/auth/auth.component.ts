@@ -53,8 +53,8 @@ export class AuthComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  onRegister() {
-    this.authService
+ async onRegister() {
+    await this.authService
       .register(this.email, this.password)
       .then((user) => {
         console.log('User registered successfully:', user);
@@ -67,8 +67,8 @@ export class AuthComponent {
       });
   }
 
-  onLogin() {
-    this.authService
+  async onLogin() {
+    await this.authService
       .signin(this.email, this.password)
       .then((user) => {
         console.log('User signed in successfully:', user);

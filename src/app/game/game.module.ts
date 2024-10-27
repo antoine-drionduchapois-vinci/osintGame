@@ -45,7 +45,6 @@ const routes: Routes = [
     FormsModule,
     CardModule,
     GoogleMapsModule
-
   ]
 })
 export class GameModule {}
