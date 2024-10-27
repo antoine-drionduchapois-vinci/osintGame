@@ -40,10 +40,6 @@ export class RankingComponent implements OnInit {
   }
 
   async getRanking() {
-    try {
-      this.ranking = await this.fireBaseService.getRanking();
-    } catch (error) {
-      console.error('Error fetching ranking:', error);
-    }
+    this.ranking = await this.fireBaseService.getRanking();
   }
 }

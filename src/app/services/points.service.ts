@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { CoordinatesService } from './coordinates.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PointsService {
-  constructor(private coordinatesService: CoordinatesService) {}
+  constructor() {}
 
   calculatePoints(distance: number): number {
     let points = 0;
